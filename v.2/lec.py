@@ -30,3 +30,19 @@
 #     print(op(x, y))
 
 # math(calk1, 5, 45)
+
+# --------------------
+# lambda-функции
+
+def math(op, x, y):
+    print(op(x, y))
+
+# def calk1(a, b):
+#     return a + b
+# это тоже самое, что и написанное далее
+
+# calk1 = lambda a, b: a + b
+# math(calk1, 5, 45)
+# а это тоже, что описано далее
+
+math(lambda a, b: a + b, 5, 45)
