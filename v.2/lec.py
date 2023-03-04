@@ -121,10 +121,10 @@
 # print(res)
 
 # ФУНКЦИЯ filter
-data = [15, 65, 9, 36, 175] # создаём список с различными элементами в виде чисел
-res = list(filter(lambda x: x % 10 == 5, data)) # применяем функцию filter и делаем выборку
-                                                # чисел которые заканчиваются на 5.
-print(res)
+# data = [15, 65, 9, 36, 175] # создаём список с различными элементами в виде чисел
+# res = list(filter(lambda x: x % 10 == 5, data)) # применяем функцию filter и делаем выборку
+#                                                 # чисел которые заканчиваются на 5.
+# print(res)
 
 # обратно отсылка к прошлой задаче: 
 # функцию where, которая прописана явно,
@@ -133,10 +133,22 @@ print(res)
 # def where(f, col):
 #     return[x for x in col if f(x)]
 
-data = [1, 2, 3, 5, 8, 15, 23, 38]
-res = map(int, data)
-print(res)
-res = filter(lambda x: x % 2 == 0, res)
-print(res)
-res = list(map(lambda x: (x, x ** 2), res))
-print(res)
+# data = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = map(int, data)
+# res = filter(lambda x: x % 2 == 0, res)
+# res = list(map(lambda x: (x, x ** 2), res))
+# print(res)
+
+# ФУНКЦИЯ zip
+# пример
+# users = ['user1', 'user2', 'user3', 'user4', 'user5']
+# ids = [4, 5, 9, 14, 7]
+# data = list(zip(users, ids))
+# print(data) # => [('user1', 4), ('user2', 5), ('user3', 9), ('user4', 14), ('user5', 7)]
+
+# Функция zip () пробегает по минимальному входящему набору:
+users = ['user1', 'user2', 'user3', 'user4', 'user5']
+ids = [4, 5, 9, 14, 7]
+salary = [111, 222, 333]
+data = list(zip(users, ids, salary))
+print(data)
