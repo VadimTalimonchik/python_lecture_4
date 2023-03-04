@@ -64,17 +64,55 @@
 #                                     # заключены в скобки
 # print(res)                          # выведем результат res
 
-# Теперь решим эту задачу при помощи lambda-функции
-def select(f, col):
-    return[f(x) for x in col]
+# # Теперь решим эту задачу при помощи lambda-функции
+# def select(f, col):
+#     return[f(x) for x in col]
+
+# def where(f, col):
+#     return[x for x in col if f(x)]
+
+# data = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = select(int, data)
+# print(res)
+# res = where(lambda x: x % 2 == 0, res)
+# print(res)
+# res = list(select(lambda x: (x, x ** 2), res))
+# print(res)
+
+# ФУНКЦИЯ map
+
+# list_1 = [x for x in range(1, 20)]
+# print(list_1)
+
+# list_1 = list(map(lambda x: x + 10, list_1))
+# print(list_1)
+
+# Задача: С клавиатуры вводится некий набор чисел, в качестве разделителя используется
+# пробел. Этон набор чисел будет считан в качестве строки. Как превратить list строк в
+# list чисел?
+# data = '15 156 96 3 5 8 52 5'
+# print(data)
+
+# data = data.split()
+# print(data)
+
+# применим функцию map
+# data = '15 156 96 3 5 8 52 5'
+
+# data = list(map(int, data.split()))
+# print(data)
+
+# отсылка к прошлой задаче
+# def select(f, col):
+#     return[f(x) for x in col]
 
 def where(f, col):
     return[x for x in col if f(x)]
 
 data = [1, 2, 3, 5, 8, 15, 23, 38]
-res = select(int, data)
+res = map(int, data)
 print(res)
 res = where(lambda x: x % 2 == 0, res)
 print(res)
-res = list(select(lambda x: (x, x ** 2), res))
+res = list(map(lambda x: (x, x ** 2), res))
 print(res)
