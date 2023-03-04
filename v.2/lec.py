@@ -79,6 +79,7 @@
 # res = list(select(lambda x: (x, x ** 2), res))
 # print(res)
 
+# ------------------------
 # ФУНКЦИЯ map
 
 # list_1 = [x for x in range(1, 20)]
@@ -120,6 +121,7 @@
 # res = list(map(lambda x: (x, x ** 2), res))
 # print(res)
 
+# ------------------------
 # ФУНКЦИЯ filter
 # data = [15, 65, 9, 36, 175] # создаём список с различными элементами в виде чисел
 # res = list(filter(lambda x: x % 10 == 5, data)) # применяем функцию filter и делаем выборку
@@ -139,6 +141,7 @@
 # res = list(map(lambda x: (x, x ** 2), res))
 # print(res)
 
+# ---------------------------
 # ФУНКЦИЯ zip
 # пример
 # users = ['user1', 'user2', 'user3', 'user4', 'user5']
@@ -146,6 +149,7 @@
 # data = list(zip(users, ids))
 # print(data) # => [('user1', 4), ('user2', 5), ('user3', 9), ('user4', 14), ('user5', 7)]
 
+# ----------------------
 # Функция zip () пробегает по минимальному входящему набору:
 # users = ['user1', 'user2', 'user3', 'user4', 'user5']
 # ids = [4, 5, 9, 14, 7]
@@ -153,8 +157,35 @@
 # data = list(zip(users, ids, salary))
 # print(data)
 
+# ---------------------
 # ФУНКЦИЯ enumerate
 # Функция enumerate() позволяет пронумеровать набор данных.
-users = ['user1', 'user2', 'user3']
-data = list(enumerate(users))
-print(data)
+# users = ['user1', 'user2', 'user3']
+# data = list(enumerate(users))
+# print(data)
+
+# -----------------------
+# ФАЙЛЫ
+# Режим a
+# colors = ['red', 'green', 'blue']
+# data = open('file_a.txt', 'a') # здесь указываем режим, в котором будем работать
+# data.writelines(colors) # разделителей не будет
+# data.close()
+
+# Ещё один способ записи данных в файл:
+# with open('file_b.txt', 'w') as data:
+#     data.write('line 1\n')
+#     data.write('line 2\n')
+
+# Режим r
+# path = 'file_b.txt'
+# data = open(path, 'r')
+# for line in data:
+#     print(line)
+# data.close()
+
+#  Режим w
+colors = ['red', 'green', 'blue']
+data = open('file.txt', 'w')
+data.writelines(colors) # разделителей не будет
+data.close()
